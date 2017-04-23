@@ -9,7 +9,7 @@ import os
 # todo  check tsm ver
 # autoupdate
 autoupdate = 1
-version = 1.0027
+version = 1.0028
 # THIS DEFAULT CONFIG
 default_config = """[Setting]
 WoWdir =

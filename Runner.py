@@ -9,7 +9,7 @@ import os
 # todo  check tsm ver
 # autoupdate
 autoupdate = 1
-version = 1.0028
+version = 1.0029
 # THIS DEFAULT CONFIG
 default_config = """[Setting]
 WoWdir =
@@ -39,10 +39,10 @@ if read == ['config.ini']:
                 def GET():
                         while 1:
                                 try:
-                                        API.GetData()
-                                        API.SaveData()
+                                        API.get_data()
+                                        API.save_data()
                                         API.translate()
-                                        API.SavedatatoTSM(WoWdir + '\\interface\\addons\TradeSkillMaster_AppHelper')
+                                        API.save_data_to_tsm(WoWdir + '\\interface\\addons\TradeSkillMaster_AppHelper')
                                         #print(time.asctime(time.localtime(time.time())))
                                         time.sleep(int(timer))
                                 except Exception as e:
@@ -54,7 +54,7 @@ if read == ['config.ini']:
                 def IDtoChinese():
                         while 1:
                                 try:
-                                        API.IDtoChinese()
+                                        API.id_to_chinese()
                                         time.sleep(int(timer))
                                 except Exception as e:
                                         print(e)
